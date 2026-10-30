@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Text</title>
+</head>
+<body>
+    <h1>Upload Image for Text Extraction</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+    
+    {% if text %}
+        <h2>Extracted Text:</h2>
+        <textarea rows="10" cols="50">{{ text }}</textarea>
+    {% endif %}
+</body>
+</html>
